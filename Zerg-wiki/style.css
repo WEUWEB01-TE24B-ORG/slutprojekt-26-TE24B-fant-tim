@@ -18,12 +18,12 @@ body{
     width: 75%;
     padding: 20px;
     display: grid;
-    grid-template-areas: 1fr 2fr 1fr;
+    grid-template-areas: 1fr 2fr;
     grid-template-areas: 
-    "head head head"
-    "Unit Unitimg sigil"
-    "Costs Info aside"
-    "footer footer footer"
+    "head head"
+    "Unit Unit "
+    "Info Aside"
+    "footer footer"
     ;
     gap: 20px;
     border: solid 3px black;
@@ -41,65 +41,69 @@ header h1{
     text-align: center;
 }
 header nav{
-    margin: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: red;
 }
-header nav a{}
-header nav a.aktiv{}
+header nav a{
+    background-color: purple;
+    padding: 10px;
+}
+header nav a.aktiv{
+    background-color: pink;
+}
 main{
 
 }
 main article{
-    border: solid black 3px;
     margin-bottom: 10px;
-    padding: 15px;
 }
 
-main article.overbar{
-    display: flex;
-}
-main article .Requirements{
-    
+main .overbar{
+    border: solid black 3px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 main article figure{}
 main article figure img{
-    border: solid black 3px;
+    width: 70%;
+    height: auto;
+    border: solid purple 3px;
 }
-main article figure img.sigil{
 
-}
-main article.Unitinfo{
-    border: solid black 3px;
+.Gubbinfo{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 20px;
     grid-area: Info;
-    
-}
-main article.Unitinfo p{
     border: solid black 3px;
     padding: 10px;
     margin-bottom: 10px;
 }
-
-main article.Unitinfo .utilities{
+.Gubbinfo article{
+    border: solid black 3px;
+    padding: 10px;
+}
+main article .utilities{
     display: flex;
     gap: 50px;
     padding: 20px;
     margin: auto;
 }
-main article .advantage{
+
+
+aside{
+    grid-area: Aside;
     border: solid black 3px;
-}
-main article .disadvantage{
-    border: solid black 3px;
-}
-main aside{
-    border: solid black 3px;
-    grid-area: aside;
     padding: 20px;
 }
 main aside a{
-    border: solid black 3px
+    /* border: solid black 3px */
 }
 main aside a.aktivaside{}
 footer{
-    border: solid black 3px;
+    /* border: solid black 3px; */
     grid-area: footer;
 }
