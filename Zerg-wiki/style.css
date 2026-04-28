@@ -11,18 +11,17 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 }
 body{
     background-color: aquamarine;
-    width: 1000px;
+    width: 65 rem;
 }
 .kontainer{
     margin: auto;
-    width: 75%;
     padding: 20px;
     display: grid;
-    grid-template-areas: 1fr 2fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-areas: 
     "head head"
-    "Unit Unit "
-    "Info Aside"
+    "unit unit"
+    "info aside"
     "footer footer"
     ;
     gap: 20px;
@@ -31,7 +30,7 @@ body{
     background-color: blue;
     margin-top: 20px;
     margin-bottom: 20px;
-    
+    width: 75%;
 }
 header{
     grid-area: head;
@@ -59,12 +58,13 @@ main article{
     margin-bottom: 10px;
 }
 
-main .overbar{
+.overbar{
     border: solid black 3px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     margin-bottom: 10px;
     padding: 10px;
+    grid-area: unit;
 }
 main article figure{}
 main article figure img{
@@ -73,11 +73,11 @@ main article figure img{
     border: solid purple 3px;
 }
 
-.Gubbinfo{
+ main .Gubbinfo{
     display: grid;
     grid-template-columns: 2fr 2fr;
     gap: 20px;
-    grid-area: Info;
+    grid-area: info;
     border: solid black 3px;
     padding: 10px;
     margin-bottom: 10px;
@@ -95,7 +95,7 @@ main article .utilities{
 
 
 aside{
-    grid-area: Aside;
+    grid-area: aside;
     border: solid black 3px;
     padding: 20px;
 }
