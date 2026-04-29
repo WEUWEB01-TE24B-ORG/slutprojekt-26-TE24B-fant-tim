@@ -10,8 +10,20 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
     padding: 0;
 }
 body{
-    background-color: aquamarine;
+    background-color: #25283D;
     width: 65 rem;
+}
+:root{
+    --space-indigo: #25283dff;
+--grape-soda: #8f3985ff;
+--amethyst-smoke: #a675a1ff;
+--rosy-taupe: #cea2acff;
+--powder-petal: #efd9ceff;
+--vintage-grape: #442b48ff;
+--dim-grey: #726e60ff;
+--muted-olive: #98b06fff;
+--yellow-green: #b6dc76ff;
+--lime-cream: #dbff76ff;
 }
 .kontainer{
     margin: auto;
@@ -27,7 +39,7 @@ body{
     gap: 20px;
     border: solid 3px black;
     padding: 30px;
-    background-color: blue;
+    background-color: #8F3985;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 75%;
@@ -45,11 +57,11 @@ header nav{
     background-color: red;
 }
 header nav a{
-    background-color: purple;
+    background-color: var(--dim-grey);
     padding: 10px;
 }
 header nav a.aktiv{
-    background-color: pink;
+    background-color: var(--lime-cream);
 }
 main{
 
@@ -60,39 +72,60 @@ main article{
 
 .overbar{
     border: solid black 3px;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
     margin-bottom: 10px;
     padding: 10px;
     grid-area: unit;
+    display: flex;
+    justify-content: space-between;
 }
+.overbar h2{
+    padding: 30px;
+    font-size: 40px;
+}
+.overbar img{
+    height: 7rem
+}
+/* .overbar h2{
+    grid-area: title;
+} */
+ .overbar img.unit{
+grid-area: unit;
+width: 25rem
+}
+.overbar img.sigil{
+
+} 
 main article figure{}
 main article figure img{
-    width: 70%;
     height: auto;
     border: solid purple 3px;
 }
 
  main .Gubbinfo{
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
     grid-area: info;
-    border: solid black 3px;
     padding: 10px;
     margin-bottom: 10px;
 }
 .Gubbinfo article{
     border: solid black 3px;
-    padding: 10px;
+    padding: 20px;
 }
 main article .utilities{
     display: flex;
+    justify-content: space-between;
     gap: 50px;
     padding: 20px;
     margin: auto;
 }
-
+main article p{
+    margin-bottom: 10px;
+}
+h4{
+    margin-bottom: 10px;
+}
 
 aside{
     grid-area: aside;
