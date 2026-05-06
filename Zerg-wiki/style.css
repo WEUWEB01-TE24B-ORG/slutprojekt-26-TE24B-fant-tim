@@ -43,13 +43,16 @@ body{
     background-color: #8F3985;
     margin-top: 1em;
     margin-bottom: 1em;
-    width: 55rem;
+    width: 60rem;
 }
 
+
+/* The title menu where u choose betweeen different units and struvtures */
 header{
     grid-area: head;
     margin-bottom: 1em;
 }
+/* menu title */
 header h1{
     text-align: center;
 }
@@ -58,6 +61,7 @@ header nav{
     padding: 2em;
     background-color: red;
 }
+/* menu buttons */
 header nav a{
     background-color: var(--dim-grey);
     padding: 1em;
@@ -65,12 +69,8 @@ header nav a{
 header nav a.aktiv{
     background-color: var(--lime-cream);
 }
-main article{
-    margin-bottom: 10px;
-    
-}
 
- /* Overbar is everything in the segment between the title/menu and the Unit info */
+/* Overbar is everything in the segment between the title/menu and the Unit info */
 .overbar{
     border: solid black 1vh;
     margin-bottom: 1em;
@@ -86,25 +86,16 @@ main article{
 .overbar img{
     height: 7rem
 }
- .overbar img.unit{
-grid-area: unit;
-width: 40%;
-}
-.overbar img.sigil{
-border-radius: 3em;
-} 
-main article figure{
-    height: auto;
-    margin: auto;
-    
-}
-main article figure img{
-    border: solid purple 1em;
+.overbar img.unit{
+    grid-area: unit;
     width: 40%;
 }
+.overbar img.sigil{
+    border-radius: 3em;
+} 
 
 /* INformation of the Unit being shown */
- main .Gubbinfo{
+main .Gubbinfo{
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2em;
@@ -122,6 +113,18 @@ main article figure img{
 }
 .Gubbinfo figure article img{
     width: 75%;
+}
+main article figure{
+height: auto;
+margin: auto;
+
+}
+main article figure img{
+    border: solid purple 1em;
+    width: 40%;
+}
+main article{
+    margin-bottom: 10px; 
 }
 main article .utilities{
     display: flex;
@@ -194,3 +197,7 @@ footer{
             "footer footer footer";
     }
 } */
+
+
+/* Model image Height: 198px Width: 255 */
+/* Pfp image Height: 277px Width: 182px  */
