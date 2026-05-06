@@ -11,7 +11,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 }
 body{
     background-color: #25283D;
-    width: 65 rem;
+    width: 100 rem;
 }
 :root{
     --space-indigo: #25283dff;
@@ -27,116 +27,170 @@ body{
 }
 .kontainer{
     margin: auto;
-    padding: 20px;
+    padding: 2em;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: 
-    "head head"
-    "unit unit"
-    "info aside"
-    "footer footer"
-    ;
-    gap: 20px;
-    border: solid 3px black;
-    padding: 30px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "head head"
+        "unit unit"
+        "info info"
+        "aside aside"
+        "footer footer" 
+        ;
+    gap: 1em;
+    border: solid 1vh black;
+    padding: 2em;
     background-color: #8F3985;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 75%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 55rem;
 }
+
 header{
     grid-area: head;
-    margin-bottom: 10px;
+    margin-bottom: 1em;
 }
 header h1{
     text-align: center;
 }
 header nav{
     text-align: center;
-    padding: 20px;
+    padding: 2em;
     background-color: red;
 }
 header nav a{
     background-color: var(--dim-grey);
-    padding: 10px;
+    padding: 1em;
 }
 header nav a.aktiv{
     background-color: var(--lime-cream);
 }
-main{
-
-}
 main article{
     margin-bottom: 10px;
+    
 }
 
+ /* Overbar is everything in the segment between the title/menu and the Unit info */
 .overbar{
-    border: solid black 3px;
-    margin-bottom: 10px;
-    padding: 10px;
+    border: solid black 1vh;
+    margin-bottom: 1em;
+    padding: 1em;
     grid-area: unit;
     display: flex;
     justify-content: space-between;
 }
 .overbar h2{
-    padding: 30px;
-    font-size: 40px;
+    padding: 1em;
+    font-size: 2em;
 }
 .overbar img{
     height: 7rem
 }
-/* .overbar h2{
-    grid-area: title;
-} */
  .overbar img.unit{
 grid-area: unit;
-width: 25rem
+width: 40%;
 }
 .overbar img.sigil{
-
+border-radius: 3em;
 } 
-main article figure{}
-main article figure img{
+main article figure{
     height: auto;
-    border: solid purple 3px;
+    margin: auto;
+    
+}
+main article figure img{
+    border: solid purple 1em;
+    width: 40%;
 }
 
+/* INformation of the Unit being shown */
  main .Gubbinfo{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    gap: 2em;
     grid-area: info;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 1em;
+    margin-bottom: 1em;
 }
 .Gubbinfo article{
-    border: solid black 3px;
-    padding: 20px;
+    border: solid black 1vh;
+    padding: 2em; 
+}
+.Gubbinfo article img{
+    height: auto;
+    width: 100%;
+}
+.Gubbinfo figure article img{
+    width: 75%;
 }
 main article .utilities{
     display: flex;
     justify-content: space-between;
-    gap: 50px;
-    padding: 20px;
+    gap: 5em;
+    padding: 2em;
     margin: auto;
 }
 main article p{
-    margin-bottom: 10px;
+    margin-bottom: 1em;
 }
 h4{
-    margin-bottom: 10px;
+    margin-bottom: 1em;
+    font-size: 2em;
 }
 
 aside{
     grid-area: aside;
-    border: solid black 3px;
-    padding: 20px;
+    border: solid black 1vh;
+    padding: 2em;
 }
-main aside a{
-    /* border: solid black 3px */
+aside ul{
+    display: flex;
+    
+    }
+aside a{
+    text-decoration: none;
+    color: var(--rosy-taupe);
+    background-color: var(--space-indigo);
+    padding: 1vh;
+    border-radius: 1em;
+    box-shadow: 1vh 1vh 1vh black;
 }
-main aside a.aktivaside{}
+aside a:hover{
+    color: rebeccapurple;
+    box-shadow: none;
+    
+}
+aside li{
+margin-top: 1em;
+}
+aside a.aktivaside{
+    background-color: var(--lime-cream);
+}
 footer{
-    /* border: solid black 3px; */
     grid-area: footer;
 }
+
+/* Ändrar hemsidan beroende på mängden pixlar */
+@media (min-width: 768px) {
+    .kontainer {
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+        "head head"
+        "unit unit"
+        "info aside" 
+        "footer footer"
+    }   
+    aside ul{
+        display: block;
+        }
+    
+}
+/* @media (min-width: 1024px) {
+    .layout {
+        grid-template-columns: 20em 1fr 20em;
+        grid-template-areas:
+            "header header header"
+            "nav main aside"
+            "footer footer footer";
+    }
+} */
