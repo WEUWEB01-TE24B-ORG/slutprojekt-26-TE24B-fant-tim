@@ -188,16 +188,6 @@ footer{
         }
     
 }
-/* @media (min-width: 1024px) {
-    .layout {
-        grid-template-columns: 20em 1fr 20em;
-        grid-template-areas:
-            "header header header"
-            "nav main aside"
-            "footer footer footer";
-    }
-} */
 
 
-/* Model image Height: 198px Width: 255 */
-/* Pfp image Height: 277px Width: 182px  */
+
